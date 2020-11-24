@@ -1,0 +1,26 @@
+# Create three variables (a,b,c) to store same value of any integer
+
+a, b, c = 15, 24, 32
+a = a / 10
+b = b * 50
+c = c + 60
+print(a, b, c)
+
+# Create a string variable of 5 characters and replace the 3rd character with G
+
+Player = "India"
+print(len(Player))
+Player = Player.replace(Player[2],'G')
+print(Player)
+
+# Create two values (a,b) of int,float data type and convert them viceversa
+
+a, pie = 15, 3.14
+print(a, 'is in the type of:', type(a))
+a = float(a)
+print(a, 'is in the type of:', type(a))
+
+print(pie, 'is in the type of:', type(pie))
+pie = int(pie)
+print(pie, 'is in the type of:', type(pie))
+
