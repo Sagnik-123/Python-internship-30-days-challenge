@@ -1,0 +1,42 @@
+# Create a python module with list and import the module in another .py file and change the value in list.
+# This particular file is the python module file with list
+
+def lst():
+    print("Python list")
+
+
+new = [1, 2, 3, 4, 5, 6]
+
+# This file is one where we have imported the module
+
+import Task7
+
+Task7.lst()
+print("List :", Task7.new)
+lst1 = [x+2 for x in Task7.new]
+print(lst1)
+
+# Install Pandas Package (try to import the package in a python file)
+# I have already installed the pandas and numpy package and now i have just imported it in a python file
+
+import pandas as pan
+import numpy as nm
+dt = nm.array([1, 2, 3, 4])
+s = pan.Series(dt, index=[10, 20, 30, 40])
+
+# Import a module that picks random number and write a program to fetch a random number from 1 to 100 on every run
+
+import random
+
+print(random.randint(1, 100))
+
+# import sys package and find the python path
+
+import sys
+sys.path
+
+# Install a package and uninstall a package using pip
+import pip
+pip install --user flask
+from pip._internal.commands import uninstall
+pip uninstall flask
