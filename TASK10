@@ -1,0 +1,67 @@
+# Regular Expressions
+
+'''Write a Python program for all the cases which can check a string contains only a certain set of characters
+(in this case a-z, A-Z and 0-9).'''
+
+import re
+
+
+def check(str):
+    pattern = re.compile(r'[a-zA-Z0-9.+]')
+    str = pattern.search(str)
+    return bool(str)
+
+
+print(check("abCDEFabcdef123450"))
+print(check("*&%@#!}{"))
+
+
+# Write a Python program that matches a word containing 'ab'.
+
+import re
+def matching(first):
+        pattern = '.ab'
+        if re.search(pattern,  first):
+                return 'The match is found'
+        else:
+                return('Opps Not matched!')
+
+print(matching("My abstract name is Herald"))
+print(matching("This the 10th excercise of this week"))
+
+
+# Write a Python program to check for a number at the end of a word/sentence.
+
+import re
+def matching(first):
+        pattern = '5$'
+        if re.search(pattern,  first):
+                return 'The match is found'
+        else:
+                return('Opps Not matched!')
+
+print(matching("My abstract name is Herald5"))
+print(matching("This the 10th excercise of this week"))
+
+
+# Write a Python program to search the numbers (0-9) of length between 1 to 3 in a given string
+
+import re
+
+check = re.finditer(r"([0-9]{1,3})", "Today i will read page no 8 98 65 412 can you please find it ")
+for str in check:
+    print(str.group(0))
+
+
+# Write a Python program to match a string that contains only uppercase letters
+
+import re
+def matching(first):
+        pattern = '^[A-Z]+$'
+        if re.search(pattern,  first):
+                return 'The match is found'
+        else:
+                return('Opps Not matched!')
+
+print(matching("SAGNIK"))
+print(matching("THIS the 10th excercise of this week"))
