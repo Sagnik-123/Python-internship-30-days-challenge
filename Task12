@@ -1,0 +1,48 @@
+import json
+
+data = '{"name1":"Sagnik", "name2":"Anik", "name3":"Anirban", "name4":"Arirtra"}'
+
+parsed = json.loads(data)
+print(parsed)
+print(parsed['name1'])
+
+###
+my_json_string = """{
+   "article": [
+
+      {
+         "id":"01",
+         "language": "JSON",
+         "edition": "first",
+         "author": "Derrick Mwiti"
+      },
+
+      {
+         "id":"02",
+         "language": "Python",
+         "edition": "second",
+         "author": "Derrick Mwiti"
+      }
+   ]"""
+jscom = json.dumps(my_json_string)
+print(jscom)
+
+# Python Tuple to JSON Array
+
+tup = 'Mango', 'Banana', 'Apple';
+print(json.dumps(tup));
+
+
+# Python String to JSON String
+
+string = "This is a cool example."
+print(json.dumps(string))
+
+# Python Boolean Values to JSON Boolean Values
+
+boolean = False
+print(json.dumps(boolean))
+
+
+
+
